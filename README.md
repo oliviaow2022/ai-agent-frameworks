@@ -18,20 +18,20 @@ export ANTHROPIC_API_KEY=your_key_here
 These patterns are not competing alternatives — they are layers. You can (and often should) combine them:
 
 ```
-┌──────────────────────────────────────────────────────────┐
+┌───────────────────────────────────────────────────────────┐
 │  05  Harness Engineering  (orchestrates everything below) │
 │  ┌────────────────────────────────────────────────────┐   │
 │  │  04  A2A  (agents call other agents as sub-tasks)  │   │
 │  │  ┌──────────────────────────────────────────────┐  │   │
 │  │  │  02  Agent Skills  (modular tool library)    │  │   │
-│  │  │  ┌──────────────────────────────────────┐   │  │   │
+│  │  │  ┌───────────────────────────────────────┐   │  │   │
 │  │  │  │  01  Function Calling  (one tool call)│   │  │   │
-│  │  │  └──────────────────────────────────────┘   │  │   │
+│  │  │  └───────────────────────────────────────┘   │  │   │
 │  │  └──────────────────────────────────────────────┘  │   │
 │  └────────────────────────────────────────────────────┘   │
-│                                                            │
-│  03  MCP  (standardised transport layer for tools)         │
-└──────────────────────────────────────────────────────────┘
+│                                                           │
+│  03  MCP  (standardised transport layer for tools)        │
+└───────────────────────────────────────────────────────────┘
 ```
 
 MCP is orthogonal — it is a wire protocol that can replace or supplement how any of the other patterns expose tools to Claude.
